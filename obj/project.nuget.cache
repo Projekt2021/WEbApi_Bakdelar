@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mb/VgmupUYkkqsv4kKxjNO860FhF58ranqOF6rwzk06SbFyyObM1/7VV558lb9BXQ+xcjDMJRNZ2Jfe/60Yw2g==",
+  "dgSpecHash": "7H+NGPQbcdvs0u30kGRToe61ZLjiM3R6QyZEXj7anyRFKjFp01i+wQ7mUXYTgsqfi5JmkJ9DJ9GIdC9S0GVS6w==",
   "success": true,
-  "projectFilePath": "D:\\.net programmering lektioner\\TestApi\\TestApi.csproj",
+  "projectFilePath": "D:\\.net programmering lektioner\\TestApi\\WEbApi_Bakdelar\\TestApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Robin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

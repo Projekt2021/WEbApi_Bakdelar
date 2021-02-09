@@ -35,7 +35,7 @@ namespace TestApi.Controllers
             return await _context.Products.Select(p => new ProductInfo { 
                                                         ProductName = p.ProductName,
                                                         ProductDescription = p.ProductDescription, 
-                                                        ImageLink = p.ImageLink, 
+                                                        ImageLink = p.ProductImages.FirstOrDefault().ImageUrl, 
                                                         SalePrice = p.SalePrice })
                                             .ToListAsync();
             //return await _context.Products.ToListAsync();
@@ -61,7 +61,7 @@ namespace TestApi.Controllers
                 {
                     ProductName = product.ProductName,
                     ProductDescription = product.ProductDescription,
-                    ImageLink = product.ImageLink,
+                    ImageLink = product.ProductImages.FirstOrDefault().ImageUrl,
                     SalePrice = product.SalePrice
                 };
             }

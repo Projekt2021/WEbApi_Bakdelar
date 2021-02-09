@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net programmering lektioner\\TestApi\\TestApi.csproj": {}
+    "D:\\.net programmering lektioner\\TestApi\\WEbApi_Bakdelar\\TestApi.csproj": {}
   },
   "projects": {
-    "D:\\.net programmering lektioner\\TestApi\\TestApi.csproj": {
+    "D:\\.net programmering lektioner\\TestApi\\WEbApi_Bakdelar\\TestApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net programmering lektioner\\TestApi\\TestApi.csproj",
+        "projectUniqueName": "D:\\.net programmering lektioner\\TestApi\\WEbApi_Bakdelar\\TestApi.csproj",
         "projectName": "TestApi",
-        "projectPath": "D:\\.net programmering lektioner\\TestApi\\TestApi.csproj",
+        "projectPath": "D:\\.net programmering lektioner\\TestApi\\WEbApi_Bakdelar\\TestApi.csproj",
         "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "D:\\.net programmering lektioner\\TestApi\\obj\\",
+        "outputPath": "D:\\.net programmering lektioner\\TestApi\\WEbApi_Bakdelar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

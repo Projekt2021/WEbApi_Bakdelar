@@ -17,9 +17,10 @@ namespace TestApi.Models
             if (!optionsBuilder.IsConfigured)
             {
                 IConfigurationRoot configuration = new ConfigurationBuilder()
-                    .SetBasePath(@"D:\.net programmering lektioner\TestApi")
+                    .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json")
                     .Build();
+                string path = Directory.GetCurrentDirectory();
                 optionsBuilder.UseSqlServer(configuration.GetConnectionString("BakdelarDB"));
             }
         }
