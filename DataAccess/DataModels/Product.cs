@@ -9,6 +9,7 @@ namespace DataAccess.DataModels
     public class Product
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductId { get; set; }
         
         [Required, MaxLength(100), StringLength(100)]
@@ -25,6 +26,10 @@ namespace DataAccess.DataModels
 
 
         public ICollection<ProductImage> ProductImages { get; set; }
+        public ICollection<Cart> Carts { get; set; }
+        public ICollection<Purchase> Purchases { get; set; }
+
+
 
         [ForeignKey("Category")]
         public int CategoryId { get; set; }

@@ -9,14 +9,14 @@ namespace DataAccess.DataModels
     public class ProductImage
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ImageId { get; set; }
-        [Required, MaxLength(100), StringLength(100)]
-
+       
+        [Required]
         public string ImageURL { get; set; }
 
         [ForeignKey("Product")]
         public int ProductId { get; set; }
-
         public Product Product { get; set; }
 
 

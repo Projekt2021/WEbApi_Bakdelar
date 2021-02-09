@@ -1,27 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace DataAccess.DataModels
 {
     public class Purchase
     {
-        
-        public int PrductId { get; set; }
-
-        public int UserId { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int PurchaseId { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime OrderDate { get; set; }
-        [Required, MaxLength(50), StringLength(50)]
-
-
+  
         [DataType(DataType.Date)]
         public DateTime DeliveryDate { get; set; }
-        [Required, MaxLength(50), StringLength(50)]
 
+        [Required, MaxLength(50), StringLength(50)]
         public string PurchaseStatus { get; set; }
+
+
+        [ForeignKey("Product")]
+        public int PrductId { get; set; }
+        public Product Product { get; set; }
+
+        [ForeignKey("User")]
+        public int UserId { get; set; }
+        public User User { get; set; }
 
     }
 }

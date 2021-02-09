@@ -6,3 +6,5 @@
 /Bakdelar_API/bin/Debug/net5.0
 /DataAccess/bin/Debug/netcoreapp3.1
 /DataAccess/DataAccess.csproj.user
+/Bakdelar_API/.vs/Bakdelar_API/config/applicationhost.config
+/obj/debug/*
