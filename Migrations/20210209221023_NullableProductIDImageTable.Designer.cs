@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApi.Models;
 
 namespace TestApi.Migrations
 {
     [DbContext(typeof(BakdelarDBContext))]
-    partial class BakdelarDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210209221023_NullableProductIDImageTable")]
+    partial class NullableProductIDImageTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,15 +46,12 @@ namespace TestApi.Migrations
                         .HasColumnName("ID")
                         .UseIdentityColumn();
 
-                    b.Property<int>("CategoryID")
+                    b.Property<int?>("CategoryID")
                         .HasColumnType("int");
 
                     b.Property<string>("ProductDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductImageID")
-                        .HasColumnType("int");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
@@ -63,7 +62,7 @@ namespace TestApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductImageID");
+                    b.HasIndex("CategoryID");
 
                     b.ToTable("Product");
                 });
@@ -76,7 +75,6 @@ namespace TestApi.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ProductID")
@@ -91,22 +89,23 @@ namespace TestApi.Migrations
 
             modelBuilder.Entity("TestApi.Models.Product", b =>
                 {
-                    b.HasOne("TestApi.Models.ProductImage", "ProductImage")
+                    b.HasOne("TestApi.Models.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("ProductImageID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryID");
 
-                    b.Navigation("ProductImage");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("TestApi.Models.ProductImage", b =>
                 {
-                    b.HasOne("TestApi.Models.Product", "Product")
-                        .WithMany()
+                    b.HasOne("TestApi.Models.Product", null)
+                        .WithMany("ProductImages")
                         .HasForeignKey("ProductID");
+                });
 
-                    b.Navigation("Product");
+            modelBuilder.Entity("TestApi.Models.Product", b =>
+                {
+                    b.Navigation("ProductImages");
                 });
 #pragma warning restore 612, 618
         }

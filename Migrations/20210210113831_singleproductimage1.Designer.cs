@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApi.Models;
 
 namespace TestApi.Migrations
 {
     [DbContext(typeof(BakdelarDBContext))]
-    partial class BakdelarDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210210113831_singleproductimage1")]
+    partial class singleproductimage1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

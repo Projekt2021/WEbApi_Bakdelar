@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using TestApi.Models;
 
 namespace TestApi.Models
 {
@@ -48,5 +49,9 @@ namespace TestApi.Models
             : base(options)
         {
         }
+
+        public DbSet<TestApi.Models.ProductImage> ProductImage { get; set; }
+
+        public DbSet<TestApi.Models.Category> Category { get; set; }
     }
 }

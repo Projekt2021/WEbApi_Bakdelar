@@ -27,44 +27,44 @@ namespace TestApi.Controllers
         public async Task<ActionResult<IEnumerable<object>>> GetProducts(string adminToken)
         {
             //ToBase64("userisadminshowfullproduct")
-            if (adminToken == "dXNlcmlzYWRtaW5zaG93ZnVsbHByb2R1Y3Q=")
-            {
+            //if (adminToken == "dXNlcmlzYWRtaW5zaG93ZnVsbHByb2R1Y3Q=")
+            //{
 
-                return await _context.Products.ToListAsync();
-            }
-            return await _context.Products.Select(p => new ProductInfo { 
-                                                        ProductName = p.ProductName,
-                                                        ProductDescription = p.ProductDescription, 
-                                                        ImageLink = p.ProductImages.FirstOrDefault().ImageUrl, 
-                                                        SalePrice = p.SalePrice })
-                                            .ToListAsync();
-            //return await _context.Products.ToListAsync();
+                return await _context.Products.Include(prod => prod.ProductImage).ToListAsync();
+           //}
+           //return await _context.Products.Select(p => new ProductInfo { 
+           //                                            ProductName = p.ProductName,
+           //                                            ProductDescription = p.ProductDescription, 
+           //                                            ImageLink = p.ProductImage.ImageUrl, 
+           //                                            SalePrice = p.SalePrice })
+           //                                .ToListAsync();
+           ////return await _context.Products.ToListAsync();
         }
 
         // GET: api/Products/5
         [HttpGet("{id}")]
         public async Task<ActionResult<object>> GetProduct(int id, string adminToken)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Products.Include(product => product.ProductImage).FirstOrDefaultAsync(prod => prod.Id == id);
 
             if (product == null)
             {
                 return NotFound();
             }
-            if (adminToken == "dXNlcmlzYWRtaW5zaG93ZnVsbHByb2R1Y3Q=")
-            {
+            //if (adminToken == "dXNlcmlzYWRtaW5zaG93ZnVsbHByb2R1Y3Q=")
+            //{
                 return product;
-            }
-            else
-            {
-                return new ProductInfo()
-                {
-                    ProductName = product.ProductName,
-                    ProductDescription = product.ProductDescription,
-                    ImageLink = product.ProductImages.FirstOrDefault().ImageUrl,
-                    SalePrice = product.SalePrice
-                };
-            }
+            //}
+            //else
+            //{
+            //    return new ProductInfo()
+            //    {
+            //        ProductName = product.ProductName,
+            //        ProductDescription = product.ProductDescription,
+            //        ImageLink = product.ProductImage.ImageUrl,
+            //        SalePrice = product.SalePrice
+            //    };
+            //}
         }
 
         // PUT: api/Products/5

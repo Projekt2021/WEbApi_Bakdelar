@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApi.Models;
 
 namespace TestApi.Migrations
 {
     [DbContext(typeof(BakdelarDBContext))]
-    partial class BakdelarDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210210111327_singleproductimage")]
+    partial class singleproductimage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,8 +86,6 @@ namespace TestApi.Migrations
 
                     b.HasKey("ProductImageID");
 
-                    b.HasIndex("ProductID");
-
                     b.ToTable("ProductImage");
                 });
 
@@ -98,15 +98,6 @@ namespace TestApi.Migrations
                         .IsRequired();
 
                     b.Navigation("ProductImage");
-                });
-
-            modelBuilder.Entity("TestApi.Models.ProductImage", b =>
-                {
-                    b.HasOne("TestApi.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID");
-
-                    b.Navigation("Product");
                 });
 #pragma warning restore 612, 618
         }
