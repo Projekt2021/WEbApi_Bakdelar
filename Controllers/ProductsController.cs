@@ -31,21 +31,25 @@ namespace TestApi.Controllers
             //{
 
                 return await _context.Products.Include(prod => prod.ProductImage).ToListAsync();
-           //}
-           //return await _context.Products.Select(p => new ProductInfo { 
-           //                                            ProductName = p.ProductName,
-           //                                            ProductDescription = p.ProductDescription, 
-           //                                            ImageLink = p.ProductImage.ImageUrl, 
-           //                                            SalePrice = p.SalePrice })
-           //                                .ToListAsync();
-           ////return await _context.Products.ToListAsync();
+            //include the product image for rendering in view on webserver
+
+
+            //}
+            //return await _context.Products.Select(p => new ProductInfo { 
+            //                                            ProductName = p.ProductName,
+            //                                            ProductDescription = p.ProductDescription, 
+            //                                            ImageLink = p.ProductImage.ImageUrl, 
+            //                                            SalePrice = p.SalePrice })
+            //                                .ToListAsync();
+            ////return await _context.Products.ToListAsync();
         }
 
         // GET: api/Products/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<object>> GetProduct(int id, string adminToken)
+        public async Task<ActionResult<object>> GetProduct(int id)// string adminToken)
         {
             var product = await _context.Products.Include(product => product.ProductImage).FirstOrDefaultAsync(prod => prod.Id == id);
+            //include the product image for rendering in view on webserver
 
             if (product == null)
             {

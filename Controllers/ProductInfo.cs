@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace TestApi.Controllers
 {
+    /// <summary>
+    /// Partial product info is exposed
+    /// </summary>
     public class ProductInfo
     {
         public string ProductName { get; set; }
