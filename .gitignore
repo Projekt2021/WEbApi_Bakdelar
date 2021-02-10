@@ -8,3 +8,5 @@
 /DataAccess/DataAccess.csproj.user
 /Bakdelar_API/.vs/Bakdelar_API/config/applicationhost.config
 /obj/debug/*
+*.user
+*.cache
