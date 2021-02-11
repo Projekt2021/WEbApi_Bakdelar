@@ -26,9 +26,9 @@ namespace DataAccess.DataModels
         public int PrductId { get; set; }
         public Product Product { get; set; }
 
-        [ForeignKey("User")]
-        public int UserId { get; set; }
-        public User User { get; set; }
+        [ForeignKey("Customer")]
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
     }
 }

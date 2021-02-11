@@ -10,3 +10,4 @@
 /obj/debug/*
 *.user
 *.cache
+*.v2
