@@ -21,8 +21,8 @@ namespace DataAccess.DataModels
         [Required, Column(TypeName = "decimal(5, 2)")]
         public decimal ProductPrice { get; set; }
         
-        public int AvailableQuantity { get; set; }
-        public double ProductWeight { get; set; }
+        public int? AvailableQuantity { get; set; }
+        public double? ProductWeight { get; set; }
 
 
         public ICollection<ProductImage> ProductImages { get; set; }

@@ -1,5 +1,6 @@
 ﻿using DataAccess;
 using DataAccess.DataModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Bakdelar_API.Controllers
-{
+{    
     [ApiController]
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
@@ -36,6 +37,7 @@ namespace Bakdelar_API.Controllers
 
         //// GET: api/Products
         [HttpGet]
+        [Route("GetAllProducts")]
         public async Task<List<Product>> GetAllProductsAsync()
         {
             return _context.Products.Select(p => new Product()
