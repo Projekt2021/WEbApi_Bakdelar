@@ -11,3 +11,6 @@
 *.user
 *.cache
 *.v2
+bin
+obj
+packages
