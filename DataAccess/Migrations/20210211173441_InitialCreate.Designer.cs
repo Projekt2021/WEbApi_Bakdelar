@@ -4,14 +4,16 @@ using DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(BakdelarAppDbContext))]
-    partial class BakdelarAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210211173441_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,7 +164,7 @@ namespace DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AvailableQuantity")
+                    b.Property<int>("AvailableQuantity")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
@@ -181,7 +183,7 @@ namespace DataAccess.Migrations
                     b.Property<decimal>("ProductPrice")
                         .HasColumnType("decimal(5,2)");
 
-                    b.Property<double?>("ProductWeight")
+                    b.Property<double>("ProductWeight")
                         .HasColumnType("float");
 
                     b.HasKey("ProductId");
