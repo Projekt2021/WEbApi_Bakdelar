@@ -1,0 +1,12 @@
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.runtimeconfig.json
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.runtimeconfig.dev.json
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csprojAssemblyReference.cache
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+C:\ITHogskolanProjects\ITHögskolanProjekt\Bakdelar-API\WEbApi_Bakdelar\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.genruntimeconfig.cache

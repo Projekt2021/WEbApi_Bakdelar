@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakdelar_API", "Bakdelar_API.csproj", "{DFA9DF09-7CD4-4E53-A8E7-D826237EFC90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{9A4B376B-BF10-4D69-A550-A018100CAFEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFA9DF09-7CD4-4E53-A8E7-D826237EFC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA9DF09-7CD4-4E53-A8E7-D826237EFC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA9DF09-7CD4-4E53-A8E7-D826237EFC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA9DF09-7CD4-4E53-A8E7-D826237EFC90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4B376B-BF10-4D69-A550-A018100CAFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4B376B-BF10-4D69-A550-A018100CAFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4B376B-BF10-4D69-A550-A018100CAFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4B376B-BF10-4D69-A550-A018100CAFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D853D2C9-F669-451A-A140-CB13346B21B7}
+	EndGlobalSection
+EndGlobal
